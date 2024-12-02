@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #dcdcdc; 
+        }
+        #calculator {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: #f0f0f0; 
+            width: 300px; /* Fixed width */
+        }
+        input[type="number"], select, button {
+            width: 100%;
+            padding: 15px; /* Increased padding for better touch */
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Ensures padding is included in total width */
+        }
+        button {
+            background-color: #a9a9a9; /* Grey button */
+            color: white;
+            cursor: pointer;
+            border: none; /* Remove border for button */
+        }
+        button:hover {
+            background-color: #808080; /* Darker grey on hover */
+        }
+        #result {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #333; /* Dark grey for result text */
+        }
+    </style>
+</head>
+<body>
+
+<div id="calculator">
+    <input type="number" id="num1" placeholder="Enter first number" required>
+    <input type="number" id="num2" placeholder="Enter second number" required>
+    <select id="operator">
+        <option value="+">Add</option>
+        <option value="-">Subtract</option>
+        <option value="*">Multiply</option>
+        <option value="/">Divide</option>
+    </select>
+    <button onclick="calculate()">Calculate</button>
+    <div id="result"></div>
+</div>
+
+<script src="calculator1.js"></script>
+
+</body>
+</html>
